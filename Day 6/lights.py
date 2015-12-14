@@ -70,16 +70,10 @@ def calc_bightness(instructions):
 
 		if instruction_clean[0] == 1:
 			brightness_level = change_bright(matrix, brightness_level, instruction_clean[1], instruction_clean[2], 1)
-#			brightness_level += (abs(p2_x-p1_x+1)*abs(p2_y-p1_y+1))
 		elif instruction_clean[0] == 2:
 			brightness_level = change_bright(matrix, brightness_level, instruction_clean[1], instruction_clean[2], -1)
-#			brightness_level -= (abs(p2_x-p1_x+1)*abs(p2_y-p1_y+1))
 		elif instruction_clean[0] == 3:
 			brightness_level = change_bright(matrix, brightness_level, instruction_clean[1], instruction_clean[2], 2)
-#			brightness_level += ((abs(p2_x-p1_x+1)*abs(p2_y-p1_y+1))*2)
-
-		#if brightness_level < 0:
-		#	brightness_level = 0
 
 	return brightness_level
 
